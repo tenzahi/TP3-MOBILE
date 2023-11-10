@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="20dp"
+android:background="@drawable/app_background"
+tools:context=".MainActivity">
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/playfair_display"
+    android:gravity="center"
+    android:padding="20dp"
+    android:text="@string/title"
+    android:textColor="#6C28F4"
+    android:textSize="25sp"
+    android:textStyle="bold" />
+
+<TextView
+    android:id="@+id/tvAge"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="25sp"
+    android:text="votre àge"
+    android:layout_marginTop="30dp"
+
+    />
+
+    <SeekBar
+        android:id="@+id/sbAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:max="120" />
+
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="3dp"
+    android:background="@drawable/line_shape"
+    android:layout_marginTop="20dp" />
+<!-- margin ken t7eb tb3ed aal fou9  o marginend mel lawta o fama right o left-->
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Est ce que vous avez jeûnez?"
+    android:layout_marginTop="25dp"
+    android:textColor="@color/black"
+    android:textSize="20dp"
+    />
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="15dp">
+
+    <RadioButton
+        android:id="@+id/rbIsFasting"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:checked="true"
+        android:text="Oui"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <RadioButton
+        android:id="@+id/rbIsNotFasting"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:checked="false"
+        android:text="Non"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+</RadioGroup>
+
+<EditText
+    android:id="@+id/etValeur"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="numberDecimal"
+    android:hint="@string/val_text"
+    android:textColorHint="@color/black"
+    android:textSize="20dp"/>
+<Button
+    android:id="@+id/btnConsulter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="50dp"
+    android:text="CONSULTER"
+    android:textSize="18sp"
+    android:textColor="@color/white"
+    android:onClick="calculer"
+    android:background="@drawable/button"
+    />
+
+<TextView
+    android:id="@+id/tvResult"
+    android:layout_width="52dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    android:text=" ... "
+    android:textSize="25dp" />
+</LinearLayout>
